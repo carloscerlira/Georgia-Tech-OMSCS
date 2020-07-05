@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\textheight = 25cm 
+\textwidth = 16cm
+\topmargin = -3.0cm 
+\oddsidemargin = 1cm
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    citecolor=black,      
+    urlcolor=blue,
+    }
+
+\usepackage{float}
+\usepackage{graphicx}
+
+\usepackage{gensymb}
+
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmax}{argmax} % thin space, limits 
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools, xparse}
+\usepackage[shortlabels]{enumitem}
+
+\usepackage[many]{tcolorbox}
+\usepackage{lipsum}
+\usepackage{amssymb}
+
+\title{Introduction to Graduate Algorithms}
+\author{Cerritos Lira, Carlos}
+\date{23 de junio del 2020}
+
+\newcommand{\pr}[1]{\left(#1\right)}
+\newcommand{\pt}[2]{\dfrac{\partial #1}{\partial #2}}
+
+\begin{document}
+\maketitle
+
+\section*{FFT}
+Problem: given $A$ and $B$ two polynomias of degree $n-1$ find an 
+algorithm to compute $C = A \cdot B$ in time $O(n \ln n)$. 
+\subsubsection*{Computing polynomial convolution}
+Given $A$ and $B$, find $x_1,...x_{2n}$ points and define:
+\begin{enumerate}
+    \item Define $A_{even}(y)$ and $A_{odd}(y)$ where $deg \leq \tfrac{n}{2}-1$.
+    \item Recursively evaluate at $n$ points $y_{i} = x_i^2$.
+    \item In order $O(n)$ time get $A(x_i)$.
+\end{enumerate}
+
+\end{document}
